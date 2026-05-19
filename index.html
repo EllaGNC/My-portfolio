@@ -32,7 +32,124 @@
             </p>
         </div>
         <div class="home-img">
+<<<<<<< HEAD
             <img src="./ellamae.png" alt="Profile Picture">
+=======
+            
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella Mae Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+pastedhow add my picture in here this is my index.html code5:43 AMClaude responded: Your image is already referenced in the HTML as .Check frontend design skillCheck frontend design skillYour image is already referenced in the HTML as ./ellamae.png — the issue is just that the file isn't in the same folder as your index.html. Here's how to fix it:
+Step 1: Rename your image file
+Make sure your profile picture file is named exactly ellamae.png (all lowercase, no spaces).
+Step 2: Place it in the correct folder
+Put the image file in the same folder as your index.html. Your project folder should look like this:
+your-project-folder/
+├── index.html
+├── style.css
+└── ellamae.png   ← your photo goes here
+Step 3: That's it!
+The HTML already has the correct code:
+html<img src="./ellamae.png" alt="Profile Picture">
+The ./ means "look in the same folder as this HTML file," so once your image is there with the right name, it will show up automatically.
+
+Common mistakes to check:
+
+❌ Image named EllaMAE.PNG (wrong capitalization) → rename to ellamae.png
+❌ Image is inside a subfolder like images/ellamae.png → either move it out, or update the src to ./images/ellamae.png
+❌ Image is a .jpg file → rename it to .png, or change the src to ./ellamae.jpg
+
+If you want to use a different filename, just update the src in the HTML to match. For example, if your photo is myPhoto.jpg:
+html<img src="./myPhoto.jpg" alt="Profile Picture">You said: wala talaga anong command gagamitin ko para maaddwala talaga anong command gagamitin ko para maadd5:50 AMClaude responded: Nakikita ko na broken pa rin yung image.Nakikita ko na broken pa rin yung image. Ganito ang gagawin mo step by step:
+Sa VS Code (o kung anong editor mo):
+
+Hanapin ang folder ng project mo (kung saan nakalagay ang index.html)
+I-copy ang picture mo (yung gusto mong profile pic)
+I-paste sa loob ng same folder as index.html
+I-rename ang picture to exactly: ellamae.png
+
+
+Kung hindi .png yung picture mo (e.g. .jpg), palitan ang HTML:
+html<!-- Kung .jpg yung picture mo -->
+<img src="./ellamae.jpg" alt="Profile Picture">
+
+<!-- Kung .jpeg -->
+<img src="./ellamae.jpeg" alt="Profile Picture">
+
+Para ma-check kung tama na ang folder structure, dapat ganito ang hitsura ng files mo:
+📁 iyong-folder/
+   ├── 📄 index.html
+   ├── 📄 style.css
+   └── 🖼️ ellamae.png   ← nandito dapat yung pic
+
+Anong extension ng picture mo? (.jpg, .jpeg, .png, .webp?) Sabihin mo sa akin para matulungan kita i-update ang src sa HTML. 😊You said: 2debad1.2debad1..a3b2b31  main -> main
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git add ellamae.jpg
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git commit -m "Add profile photo"
+On branch main
+Your branch is up to date with 'origin/main'.
+nothing to commit, working tree clean
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git push origin main
+Everything up-to-date
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git add ellamae.jpeg
+fatal: pathspec 'ellamae.jpeg' did not match any files
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git add ellamae.jpeg
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git commit -m "Add profile photo"
+[main 1b0e16b] Add profile photo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 ellamae.jpeg
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git push origin main
+To https://github.com/EllaGNC/My-portfolio
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/EllaGNC/My-portfolio'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+@EllaGNC ➜ /workspaces/My-portfolio (main) $Show more5:53 AMClaude responded: Kailangan mo munang mag-pull bago mag-push.Kailangan mo munang mag-pull bago mag-push. Sundan mo ito:
+Step 1: Pull muna
+bashgit pull origin main
+Step 2: Pagkatapos, push na
+bashgit push origin main
+
+Tapos, update ang HTML mo — palitan ang ellamae.png ng ellamae.jpeg:
+html<img src="./ellamae.jpeg" alt="Profile Picture">
+I-save, tapos:
+bashgit add index.html
+git commit -m "Fix image filename to ellamae.jpeg"
+git push origin main
+
+Subukan mo muna yung git pull origin main at sabihin mo kung may error pa. 😊You said: @EllaGNC ➜ /workspaces/My-portfolio (main) $ git pull origin main@EllaGNC ➜ /workspaces/My-portfolio (main) $ git pull origin main
+From https://github.com/EllaGNC/My-portfolio
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git push origin main
+Everything up-to-date
+@EllaGNC ➜ /workspaces/My-portfolio (main) $ git add index.html
+git commit -m "Fix image filename to ellamae.jpeg"
+git push origin main
+On branch main
+Your branch is up to date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main
+nothing added to commit but untracked files present (use "git add" to track)
+Everything up-to-date
+@EllaGNC ➜ /workspaces/My-portfolio (main) $Show more5:57 AMClaude responded: Ang problema — hindi pa na-update ang index.Ang problema — hindi pa na-update ang index.html mo. Kailangan mong i-edit muna ang file.
+Step 1: Buksan ang index.html mo sa VS Code, hanapin ito:
+html<img src="./ellamae.png" alt="Profile Picture">
+I-palitan ng:
+html<img src="./ellamae.jpeg" alt="Profile Picture">
+>>>>>>> a623dc944fd847dc3f6508e93b6def768b91206a
         </div>
     </section>
 
