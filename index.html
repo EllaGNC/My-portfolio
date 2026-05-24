@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ella Mae Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxicons -->
@@ -11,122 +12,144 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="header">
-        <a href="#" class="logo">Ella<span>.</span></a>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<!-- NAVBAR -->
+<header class="header">
+    <a href="#" class="logo">Ella<span>.</span></a>
 
-    <!-- HOME SECTION -->
-    <section class="home">
-        <div class="home-content">
-            <span class="tag">Welcome to my Portfolio</span>
-            <h1>Hello, I'm <em>Ella Mae</em></h1>
-            <h3>I.T Student</h3>
-            <div class="divider"></div>
-            <p>
-                I create clean and modern website designs focused on creativity, usability, and visual appeal.
-                I am continuously improving my coding skills while exploring innovative projects in web design and digital content creation.
-            </p>
-        </div>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-        <div class="home-img">
-            <img src="./ellamae.png" alt="Profile Picture">
-        </div>
-    </section>
+<!-- HOME -->
+<section class="home">
+    <div class="home-content">
+        <span class="tag">Welcome to my Portfolio</span>
+        <h1>Hello, I'm <em>Ella Mae</em></h1>
+        <h3>I.T Student</h3>
+        <div class="divider"></div>
 
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <span class="section-label">Get to know me</span>
-        <h2>About <em>Me</em></h2>
-        <div class="section-line"></div>
         <p>
-            Hi, I'm Ella Mae, a 3rd year I.T. student dedicated to designing modern and user-friendly websites.
-            I create simple yet visually appealing web experiences while continuously improving my coding and creative skills.
+            I create clean and modern website designs focused on creativity, usability, and visual appeal.
+            I am continuously improving my coding skills.
         </p>
-    </section>
+    </div>
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-        <span class="section-label">What I've built</span>
-        <h2>My <em>Projects</em></h2>
-        <div class="section-line"></div>
+    <div class="home-img">
+        <img src="./ellamae.png" alt="Profile Picture">
+    </div>
+</section>
 
-        <div class="project-container">
+<!-- ABOUT -->
+<section class="about" id="about">
+    <span class="section-label">Get to know me</span>
+    <h2>About <em>Me</em></h2>
 
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxl-figma'></i></div>
-                <h3>Figma Website</h3>
-                <p>Modern UI/UX design created in Figma for portfolio and system projects.</p>
-                <a href="https://www.figma.com" target="_blank" class="project-btn">View Project</a>
-            </div>
+    <p>
+        Hi, I'm Ella Mae, a 3rd year I.T student passionate about web development and UI/UX design.
+    </p>
+</section>
 
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxl-github'></i></div>
-                <h3>Web Design Projects</h3>
-                <p>School and personal responsive website projects using HTML and CSS.</p>
-                <a href="https://github.com" target="_blank" class="project-btn">View GitHub</a>
-            </div>
+<!-- SERVICES -->
+<section class="services" id="services">
+    <span class="section-label">Services</span>
+    <h2>How I Help</h2>
 
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxs-buildings'></i></div>
-                <h3>Barangay System</h3>
-                <p>Online request system for barangay document processing.</p>
-                <a href="#" class="project-btn">Visit Website</a>
-            </div>
+    <div class="services-container">
 
+        <div class="service-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>I build responsive and modern websites using HTML and CSS.</p>
         </div>
-    </section>
 
-    <!-- CERTIFICATIONS SECTION (NEW) -->
-    <section class="certifications" id="certifications">
-        <span class="section-label">Proof of learning</span>
-        <h2>My <em>Certifications</em></h2>
-        <div class="section-line"></div>
-
-        <div class="cert-container">
-
-            <div class="cert-box">
-                <div class="cert-icon"><i class='bx bxs-certification'></i></div>
-                <h3>HTML & CSS Fundamentals</h3>
-                <p>Completed basic web development training focusing on structure, styling, and responsive design.</p>
-            </div>
-
-            <div class="cert-box">
-                <div class="cert-icon"><i class='bx bxs-certification'></i></div>
-                <h3>Responsive Web Design</h3>
-                <p>Learned how to build mobile-friendly and adaptive websites using modern CSS techniques.</p>
-            </div>
-
-            <div class="cert-box">
-                <div class="cert-icon"><i class='bx bxs-certification'></i></div>
-                <h3>UI/UX Basics</h3>
-                <p>Introduction to user interface and user experience design principles.</p>
-            </div>
-
+        <div class="service-box">
+            <i class='bx bx-palette'></i>
+            <h3>UI/UX Design</h3>
+            <p>Clean and simple layouts focused on user experience.</p>
         </div>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-        <span class="section-label">Let's connect</span>
-        <h2>Contact <em>Me</em></h2>
-        <div class="section-line"></div>
-
-        <p>Feel free to reach out through my social media accounts below!</p>
-
-        <div class="contact-icons">
-            <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://github.com" target="_blank"><i class='bx bxl-github'></i></a>
+        <div class="service-box">
+            <i class='bx bx-edit-alt'></i>
+            <h3>Content Writing</h3>
+            <p>I create creative content for websites and blogs.</p>
         </div>
-    </section>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <span class="section-label">What I've built</span>
+    <h2>My <em>Projects</em></h2>
+
+    <div class="project-container">
+
+        <div class="project-box">
+            <i class='bx bxl-figma'></i>
+            <h3>Figma Design</h3>
+            <p>UI/UX design projects created in Figma.</p>
+        </div>
+
+        <div class="project-box">
+            <i class='bx bxl-github'></i>
+            <h3>Web Projects</h3>
+            <p>HTML & CSS school projects.</p>
+        </div>
+
+        <div class="project-box">
+            <i class='bx bxs-buildings'></i>
+            <h3>Barangay System</h3>
+            <p>Online request system project.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certifications" id="certifications">
+    <span class="section-label">Proof of Learning</span>
+    <h2>My Certifications</h2>
+
+    <div class="cert-container">
+
+        <div class="cert-box">
+            <i class='bx bxs-certification'></i>
+            <h3>HTML & CSS Fundamentals</h3>
+            <p>Basic web development certification.</p>
+        </div>
+
+        <div class="cert-box">
+            <i class='bx bxs-certification'></i>
+            <h3>Responsive Web Design</h3>
+            <p>Mobile-friendly website training.</p>
+        </div>
+
+        <div class="cert-box">
+            <i class='bx bxs-certification'></i>
+            <h3>UI/UX Basics</h3>
+            <p>Design fundamentals and user experience.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <span class="section-label">Let's connect</span>
+    <h2>Contact Me</h2>
+
+    <div class="contact-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+    </div>
+</section>
 
 </body>
 </html>
