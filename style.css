@@ -1,102 +1,580 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ella Mae Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap');
 
-    <!-- Boxicons - para lumabas ang mga icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-</head>
-<body>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- NAVBAR -->
-    <header class="header">
-        <a href="#" class="logo">Ella<span>.</span></a>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+:root {
+    --cream: #faf8f4;
+    --cream-dark: #f0ebe0;
+    --cream-mid: #e8e0d0;
+    --navy: #0d1b2a;
+    --navy-mid: #1b2d42;
+    --accent: #c8963e;
+    --accent-light: #e8b96a;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #ddd5c4;
+    --white: #ffffff;
+}
 
-    <!-- HOME SECTION -->
-    <section class="home">
-        <div class="home-content">
-            <span class="tag">Welcome to my Portfolio</span>
-            <h1>Hello, I'm <em>Ella Mae</em></h1>
-            <h3>I.T Student</h3>
-            <div class="divider"></div>
-            <p>
-                I create clean and modern website designs focused on creativity, usability, and visual appeal.
-                I am continuously improving my coding skills while exploring innovative projects in web design and digital content creation.
-            </p>
-        </div>
-        <div class="home-img">
-            <img src="./ellamae.png" alt="Profile Picture">
-        </div>
-    </section>
+html { scroll-behavior: smooth; }
 
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <span class="section-label">Get to know me</span>
-        <h2>About <em>Me</em></h2>
-        <div class="section-line"></div>
-        <p>
-            Hi, I'm Ella Mae, a 3rd year I.T. student dedicated to designing modern and user-friendly websites.
-            I create simple yet visually appealing web experiences while continuously improving my coding and creative skills.
-        </p>
-    </section>
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-        <span class="section-label">What I've built</span>
-        <h2>My <em>Projects</em></h2>
-        <div class="section-line"></div>
-        <div class="project-container">
+/* ========================
+   HEADER
+======================== */
+.header {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(250, 248, 244, 0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
 
-            <!-- Project 1: Figma Website -->
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxl-figma'></i></div>
-                <h3>Figma Website</h3>
-                <p>A personal and collaborative group project designed in Figma, focused on creating a modern portfolio design with a user-friendly layout and creative UI/UX elements.</p>
-                <a href="https://www.figma.com/design/67VERPUmjbqN8w3URtOxZp/Gym-Management-System--Carlos-Fitness-Center--UI-Design?m=auto&t=7losAvu5VgzCz20N-6" target="_blank" rel="noopener noreferrer" class="project-btn">View Project</a>
-                <a href="https://www.figma.com/design/iGAae65CgcO5Xv7sLyAx9g/GRP-4--Barangay-Online-Request-System?m=auto&t=7losAvu5VgzCz20N-6" target="_blank" rel="noopener noreferrer" class="project-btn">View Project</a>
-            </div>
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+.logo span { color: var(--accent); }
 
-            <!-- Project 2: GitHub Portfolio -->
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxl-github'></i></div>
-                <h3>Web Design Projects</h3>
-                <p>School and personal web design projects focused on modern, clean, and responsive layouts.</p>
-                <a href="https://github.com/EllaGNC/My-portfolio/commits?author=EllaGNC" target="_blank" rel="noopener noreferrer" class="project-btn">View on Github</a>
-            </div>
+.navbar { display: flex; align-items: center; gap: 4px; }
 
-            <!-- Project 3: Barangay Online Request System -->
-            <div class="project-box">
-                <div class="project-icon"><i class='bx bxs-buildings'></i></div>
-                <h3>Barangay Online Request System</h3>
-                <p>A group project — a Barangay Online Request System that allows residents to submit requests online.</p>
-                <a href="https://group4bors.infinityfree.me/" target="_blank" rel="noopener noreferrer" class="project-btn">Visit Website</a>
-            </div>
+.navbar a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+}
+.navbar a:hover { background: var(--cream-dark); color: var(--navy); }
 
-        </div>
-    </section>
+/* ========================
+   HOME SECTION
+======================== */
+.home {
+    min-height: 94vh;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    align-items: center;
+    padding: 0 7%;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+}
 
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-        <span class="section-label">Let's connect</span>
-        <h2>Contact <em>Me</em></h2>
-        <div class="section-line"></div>
-        <p>Feel free to reach out through any of my social media accounts below!</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/ellamaetolentino02" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/mae_tlntn/?hl=en" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
-            <a href="https://github.com/EllaGNC/My-portfolio/commits?author=EllaGNC" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
-        </div>
-    </section>
+.home-bg-text {
+    position: absolute;
+    right: -2%;
+    bottom: -4%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(200, 150, 62, 0.08);
+    letter-spacing: -4px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    line-height: 1;
+}
 
-</body>
-</html>
+.home-content {
+    position: relative;
+    z-index: 1;
+}
+
+.home-content .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+.home-content .tag::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.home-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    color: var(--navy);
+    line-height: 1.0;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+.home-content h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
+
+.home-content h3 {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.divider {
+    width: 36px;
+    height: 1.5px;
+    background: var(--accent);
+    margin: 22px 0;
+    opacity: 0.6;
+}
+
+.home-content p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 460px;
+    font-weight: 300;
+}
+
+.social-icons {
+    margin-top: 36px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--muted);
+    transition: all 0.25s;
+}
+.social-icons a i { font-size: 20px; line-height: 1; }
+.social-icons a:hover {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* HOME IMAGE */
+.home-img {
+    position: relative;
+    z-index: 1;
+}
+
+.img-frame {
+    position: relative;
+}
+.img-frame::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    opacity: 0.25;
+}
+.img-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    opacity: 0.3;
+    border-radius: 0 0 0 6px;
+}
+.img-frame img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.img-badge {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 80px;
+    height: 80px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border: 3px solid var(--cream);
+}
+.badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent-light);
+    line-height: 1;
+}
+.badge-num sup { font-size: 11px; }
+.badge-text {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 2px;
+}
+
+/* ========================
+   ABOUT SECTION
+======================== */
+.about {
+    background: var(--navy);
+    padding: 100px 7%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.about::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    left: 5%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 320px;
+    color: rgba(200, 150, 62, 0.04);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-label-col { padding-top: 4px; }
+
+.about .section-label { color: var(--accent-light); }
+.about .section-label::before,
+.about .section-label::after { background: var(--accent-light); }
+
+.about h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 1.0;
+    margin: 10px 0 18px;
+}
+.about h2 em { color: var(--accent-light); font-weight: 300; }
+.about .section-line { background: var(--accent-light); margin: 0; }
+
+.about-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.about-text-col p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    line-height: 2;
+    font-weight: 300;
+}
+
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--accent-light);
+    line-height: 1;
+}
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 4px;
+}
+
+/* ========================
+   SECTION SHARED
+======================== */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.section-label::before,
+.section-label::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.section-header h2,
+.contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    color: var(--navy);
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin: 10px 0 16px;
+    line-height: 1.0;
+}
+.section-header h2 em,
+.contact h2 em { font-style: italic; color: var(--accent); font-weight: 300; }
+
+.section-line {
+    width: 36px;
+    height: 1.5px;
+    background: var(--accent);
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+/* ========================
+   PROJECTS SECTION
+======================== */
+.projects {
+    background: var(--cream-dark);
+    padding: 100px 7%;
+    position: relative;
+    z-index: 1;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-box {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.project-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s;
+}
+.project-box:hover::after { transform: scaleX(1); }
+.project-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(13, 27, 42, 0.1);
+    border-color: transparent;
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.project-icon {
+    width: 46px;
+    height: 46px;
+    background: var(--cream-dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+.project-icon i { font-size: 22px; line-height: 1; }
+
+.project-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(200, 150, 62, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.project-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.project-box p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.8;
+    flex-grow: 1;
+    font-weight: 300;
+}
+
+.project-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--navy);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    border: 1px solid var(--navy);
+    transition: all 0.25s;
+}
+.project-btn i { font-size: 14px; }
+.project-btn:hover {
+    background: var(--navy);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ========================
+   CONTACT SECTION
+======================== */
+.contact {
+    background: var(--cream);
+    padding: 100px 7%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact p {
+    font-size: 15.5px;
+    color: var(--muted);
+    margin: 0 auto 44px;
+    max-width: 420px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90px;
+    padding: 24px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--muted);
+    transition: all 0.25s;
+}
+.contact-icons a i { font-size: 28px; line-height: 1; }
+.contact-icons a span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact-icons a:hover {
+    transform: translateY(-6px);
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+    box-shadow: 0 12px 32px rgba(13, 27, 42, 0.18);
+}
+
+/* ========================
+   FOOTER
+======================== */
+.footer {
+    text-align: center;
+    padding: 24px 7%;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--cream);
+    letter-spacing: 0.3px;
+}
+.footer strong { color: var(--navy); font-weight: 600; }
