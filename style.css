@@ -577,25 +577,7 @@ img {
     font-size: 1rem;
 }
 
-.about-img {
-    flex-shrink: 0;
-}
 
-.about-img-frame {
-    width: 280px;
-    height: 320px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid rgba(200, 245, 100, 0.2);
-    background: var(--dark3);
-}
-
-.about-img-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
 
 /* ===== CTA SECTION ===== */
 .cta-section {
@@ -803,11 +785,6 @@ img {
 
     .about-badges {
         justify-content: center;
-    }
-
-    .about-img-frame {
-        width: 220px;
-        height: 260px;
     }
 
     .footer-inner {
